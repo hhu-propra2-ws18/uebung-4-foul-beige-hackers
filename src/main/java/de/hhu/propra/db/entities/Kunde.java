@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data // Lombok - Generiert Getter, Setter, toString, ...
 @Entity
@@ -19,4 +21,7 @@ public class Kunde {
     private Integer plz;
 
     // TODO: Hier muss irgendetwas mit Autos hin...
+
+    private List<Auto> autos;
+
 }
