@@ -6,5 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface KundeRepository extends CrudRepository<Kunde, Long> {
+
     List<Kunde> findAll();
+
+    List<Kunde> findAllByAutosFarbe(String farbe);
 }

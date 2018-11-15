@@ -28,10 +28,13 @@
         <td th:text="${kunde.plz}">89140</td>
         <td>
             <ul>
-                <li th:each="auto:${kunde.autos}" th:text="${auto.marke + ', ' + auto.farbe + ' ' + auto.hubraum}">Volkswagen -- schwarz (2000 ccm)</li>
+                <li th:each="auto:${kunde.autos}" th:text="${auto.marke + ', ' + auto.farbe + ', ' + auto.hubraum}">Volkswagen -- schwarz (2000 ccm)</li>
             </ul>
         </td>
     </tr>
+    <ul>
+        <li th:each="kundef:${farbkunden}" th:text="${kundef.name}"> Kunde A</li>
+    </ul>
     </tbody>
 </table>
 </body>
