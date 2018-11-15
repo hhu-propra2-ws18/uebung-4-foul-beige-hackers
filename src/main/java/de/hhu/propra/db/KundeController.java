@@ -16,7 +16,7 @@ public class KundeController{
 
     @GetMapping("/")
     public String index(Model model) {
-        List<Kunde> kunden = KundeRepository.findAll();
+        List<Kunde> alleKunden = kunden.findAll();
         model.addAttribute(kunden);
         return "index";
     }
