@@ -26,9 +26,9 @@
         <td th:text="${kunde.name}">Vorwerk & Co. KG</td>
         <td th:text="${kunde.stadt}">Wuppertal</td>
         <td th:text="${kunde.plz}">89140</td>
-        <td th:each="auto:${kunde.autos}">
+        <td>
             <ul>
-                <li th:text="${auto.marke + ', ' + auto.farbe + ' ' + auto.hubraum}">Volkswagen -- schwarz (2000 ccm)</li>
+                <li th:each="auto:${kunde.autos}" th:text="${auto.marke + ', ' + auto.farbe + ' ' + auto.hubraum}">Volkswagen -- schwarz (2000 ccm)</li>
             </ul>
         </td>
     </tr>

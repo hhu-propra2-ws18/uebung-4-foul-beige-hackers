@@ -16,8 +16,8 @@ public class KundeController{
 
     @GetMapping("/")
     public String index(Model model) {
-        List<Kunde> alleKunden = kunden.findAll();
-        model.addAttribute(kunden);
+        List<Kunde> allekunden = kunden.findAll();
+        model.addAttribute("kunden", allekunden);
         return "index";
     }
 }
